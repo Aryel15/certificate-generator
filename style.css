@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@theme {
+  --font-inter: "Inter", sans-serif; 
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+canvas {
+    margin-top: 20px;
+    border: 1px solid #3f3f3f;
+    width: 800px;
+    height: 600px;
+}
+
+input::-webkit-file-upload-button{
+    border-radius: calc(infinity * 1px);
+    background-color: #e2e2e2;
+    color: #3f3f3f;
+    padding: 2px 5px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: inline-block;
+}

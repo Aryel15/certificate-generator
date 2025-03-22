@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Certificado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-8xl bg-white shadow-lg rounded-lg p-6 flex flex-col md:flex-row items-center md:items-start gap-8">
+        <!-- Formulário -->
+        <div class="w-full md:w-1/2">
+            <h2 class="text-2xl font-bold mb-4 text-center md:text-left">Gerador de Certificado</h2>
+
+            <div class="grid gap-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold">Nome do Aluno:</label>
+                    <input type="text" id="nome" placeholder="Digite o nome"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Nome do Curso:</label>
+                    <input type="text" id="curso" placeholder="Digite o curso"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold">Instituição:</label>
+                    <input type="text" id="instituicao" placeholder="Nome da instituição"
+                        class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 font-semibold">Data de Início:</label>
+                        <input type="date" id="inicio"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-semibold">Data de Conclusão:</label>
+                        <input type="date" id="fim"
+                            class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+                    </div>
+                </div>
+
+                <button onclick="preencherCertificado()"
+                    class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition w-full">
+                    Preencher Certificado
+                </button>
+            </div>
+        </div>
+
+        <!-- Certificado -->
+        <div class="w-full md:w-1/2 flex flex-col items-center">
+            <canvas id="certificadoCanvas" class="border rounded-md shadow bg-gray-50 p-4"></canvas>
+
+            <button id="downloadBtn" onclick="baixarCertificado()"
+                class="mt-4 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition hidden">
+                Baixar Certificado
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
